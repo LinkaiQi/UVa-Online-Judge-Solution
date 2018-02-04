@@ -1,3 +1,37 @@
+/* UVa problem: 10815
+ *
+ * Topic: Data structures
+ *
+ * Level: challenging
+ *
+ * Brief problem description:
+ *
+ *   After read text file, print all words that occur in that text file
+ *   in alphabet order
+ *
+ * Solution Summary:
+ *
+ *   Using the The trie starts out with a root node which points to the
+ *   start letter nodes of the alphabet. If you add a new word, find the
+ *   first letter of the node and keep adding node for that specific letter
+ *   as you go down in the trie. Once you reach the end, tag the specific
+ *   node you have reached to denote the path to this node is a word.
+ *
+ *   If we do a inorder traversal on this tree and keep track of the
+ *   nodes passed we can get an alphabetically sorted list of words.
+ *
+ * Used Resources:
+ *
+ *   Reference: http://www.algorithmist.com/index.php/Trie
+ *
+ * I hereby certify that I have produced the following solution myself
+ * using only the resources listed above in accordance with the CMPUT
+ * 403 collaboration policy.
+ *
+ *
+ * --------------------- Linkai Qi
+ */
+
 #include <iostream>
 #include <string>
 #include <sstream>

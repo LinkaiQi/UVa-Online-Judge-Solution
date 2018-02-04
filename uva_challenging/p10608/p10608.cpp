@@ -1,3 +1,33 @@
+/* UVa problem: 10608
+ *
+ * Topic: Data structures
+ *
+ * Level: challenging
+ *
+ * Brief problem description:
+ *
+ *   Following the rule: "If A and B are friends and B and C are friends,
+ *   then A and C are friends too". Get list of friend list, count how
+ *   many people there are in the largest group of friends.
+ *
+ * Solution Summary:
+ *
+ *   Solved by the Union Find algorithm. Each people has a pointer points
+ *   to its "parent". If two peoples point to the same parent, then they
+ *   are in the same set.
+ *
+ * Used Resources:
+ *
+ *   Reference: https://en.wikipedia.org/wiki/Disjoint-set_data_structure
+ *
+ * I hereby certify that I have produced the following solution myself
+ * using only the resources listed above in accordance with the CMPUT
+ * 403 collaboration policy.
+ *
+ *
+ * --------------------- Linkai Qi
+ */
+
 #include <iostream>
 using namespace std;
 

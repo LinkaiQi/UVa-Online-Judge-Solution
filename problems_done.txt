@@ -1,0 +1,72 @@
+# Change NO to YES, and replate <Extra?> by the ID of extra problems you
+# solved. If you solved more problems in a category, add extra lines of the
+# form <ID>: YES
+
+
+# Data Structures:
+uva_10608:  YES
+uva_10815:  YES
+uva_10107:  YES  
+<Extra2>:   NO  
+
+# Strings:
+uva_11512:  YES
+uva_11837:  NO
+<Extra1>:   NO  
+<Extra2>:   NO  
+
+# Sorting:
+uva_10026:  NO
+uva_10327:  NO
+<Extra1>:   NO
+<Extra2>:   NO
+
+# Arithmetic:
+uva_202:    NO
+uva_11955:  NO
+<Extra1>:   NO
+<Extra2>:   NO
+
+# Combinatorics:
+uva_11330:  NO
+uva_12492:  NO
+<Extra1>:   NO
+<Extra2>:   NO
+
+# Number Theory:
+uva_374:    NO
+uva_11327:  NO
+<Extra1>:   NO
+<Extra2>:   NO
+
+# Backtracking:
+uva_11195:  NO
+uva_307:    NO
+<Extra1>:   NO
+<Extra2>:   NO
+
+# Graph Traversal:
+uva_437:    NO
+uva_10672:  NO
+<Extra1>:   NO
+<Extra2>:   NO
+
+# Graph Algorithms:
+uva_869:    NO
+uva_10034:  NO
+<Extra1>:   NO
+<Extra2>:   NO
+
+# Dynamic Programming:
+uva_674:    NO
+uva_10003:  NO
+<Extra1>:   NO
+<Extra2>:   NO
+
+# Geometry:
+uva_811:    NO
+uva_10065:  NO
+<Extra1>:   NO
+<Extra2>:   NO
+
+Other:

@@ -1,3 +1,35 @@
+/* UVa problem: 10107
+ *
+ * Topic: Data structures
+ *
+ * Level: easy
+ *
+ * Brief problem description:
+ *
+ *   Keep reading number from stdin, after the new number has been added,
+ *   get the current value of the median.
+ *
+ * Solution Summary:
+ *
+ *   Keeping a sorted list to store the number. To add a new numebr(num)
+ *   in the sorted list, run binary search to find a position index(pos)
+ *   of the list that list[pos] <= num. Then get the median of the set of
+ *   numbers would only be constant time, since the list is sorted.
+ *   Time complexity:
+ *     insert a number: O(logn+n), get-median O(1)
+ *
+ * Used Resources:
+ *
+ *   None
+ *
+ * I hereby certify that I have produced the following solution myself
+ * using only the resources listed above in accordance with the CMPUT
+ * 403 collaboration policy.
+ *
+ *
+ * --------------------- Linkai Qi
+ */
+
 #include <iostream>
 #include <vector>
 

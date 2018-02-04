@@ -1,5 +1,32 @@
-// build suffix array algorithm referenced from:
-// https://www.geeksforgeeks.org/suffix-array-set-1-introduction/
+/* UVa problem: 11512
+ *
+ * Topic: String
+ *
+ * Level: challenging
+ *
+ * Brief problem description:
+ *
+ *   Find the longest common substring
+ *
+ * Solution Summary:
+ *
+ *   1. Construct suffix array from the string,
+ *   2. Find the longest common prefix in the suffix
+ *      (only needs to compare adjacent strings)
+ *
+ * Used Resources:
+ *
+ *   build suffix array algorithm referenced from:
+ *   https://www.geeksforgeeks.org/suffix-array-set-1-introduction/
+ *
+ * I hereby certify that I have produced the following solution myself
+ * using only the resources listed above in accordance with the CMPUT
+ * 403 collaboration policy.
+ *
+ *
+ * --------------------- Linkai Qi
+ */
+
 
 #include <iostream>
 #include <string>
