@@ -1,4 +1,4 @@
-# Change NO to YES, and replate <Extra?> by the ID of extra problems you
+# Change NO to YES, and replace <Extra?> by the ID of extra problems you
 # solved. If you solved more problems in a category, add extra lines of the
 # form <ID>: YES
 
@@ -6,19 +6,19 @@
 # Data Structures:
 uva_10608:  YES
 uva_10815:  YES
-uva_10107:  YES  
-<Extra2>:   NO  
+uva_10107:  YES
+uva_136:    YES
 
 # Strings:
 uva_11512:  YES
-uva_11837:  NO
-<Extra1>:   NO  
-<Extra2>:   NO  
+uva_11837:  YES
+uva_10679:  YES
+uva_454:    YES
 
 # Sorting:
-uva_10026:  NO
-uva_10327:  NO
-<Extra1>:   NO
+uva_10026:  YES
+uva_10327:  YES
+uva_10905:  YES
 <Extra2>:   NO
 
 # Arithmetic:
