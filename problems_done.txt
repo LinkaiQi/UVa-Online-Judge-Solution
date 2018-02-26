@@ -19,25 +19,25 @@ uva_454:    YES
 uva_10026:  YES
 uva_10327:  YES
 uva_10905:  YES
-<Extra2>:   NO
+uva_10041:  YES
 
 # Arithmetic:
-uva_202:    NO
-uva_11955:  NO
+uva_202:    YES
+uva_11955:  YES
 <Extra1>:   NO
 <Extra2>:   NO
 
 # Combinatorics:
-uva_11330:  NO
-uva_12492:  NO
+uva_11330:  YES
+uva_12492:  YES
 <Extra1>:   NO
 <Extra2>:   NO
 
 # Number Theory:
-uva_374:    NO
-uva_11327:  NO
-<Extra1>:   NO
-<Extra2>:   NO
+uva_374:    YES
+uva_11327:  YES
+uva_406:    YES
+uva_408:    YES
 
 # Backtracking:
 uva_11195:  NO
