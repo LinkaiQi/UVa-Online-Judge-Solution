@@ -40,9 +40,9 @@ uva_406:    YES
 uva_408:    YES
 
 # Backtracking:
-uva_11195:  NO
-uva_307:    NO
-<Extra1>:   NO
+uva_11195:  YES
+uva_307:    YES
+uva_574:    YES
 <Extra2>:   NO
 
 # Graph Traversal:
@@ -70,3 +70,4 @@ uva_10065:  NO
 <Extra2>:   NO
 
 Other:
+uva_902:    YES
