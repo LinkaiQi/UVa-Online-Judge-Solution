@@ -11,11 +11,12 @@
  * Solution Summary:
  *   We only to consider the distance between the alphabets in the text and
  *   the alphabets in the pattern. If the distances are all the same, the we
- *   have found a match
+ *   have found a match. We can speed up this program by using KMP substring
+ *   matching algorithm, which has been implemented in uva_10679.
  *
  * Used Resources:
- *
- *   None
+ *   KMP algorithm reference:
+ *    https://www.geeksforgeeks.org/searching-for-patterns-set-2-kmp-algorithm/
  *
  * I hereby certify that I have produced the following solution myself
  * using only the resources listed above in accordance with the CMPUT
@@ -33,42 +34,68 @@
 using namespace std;
 
 
-bool check_plag(int *song, int *snippet, int i, int T) {
-  // cout << "call check_plag " << i << endl;
-  int diff, pre_diff = -1;
-  for (int j = 0; j < T; j++) {
-    if (snippet[j] >= song[j+i]) {
-      diff = snippet[j] - song[j+i];
-    } else {
-      diff = 10 - song[j+i] + snippet[j] + 2;
+void calc_prefix(int *P, int p_len, int *prefix) {
+  prefix[0] = 0;
+  int j = 0;
+  for (int i = 1; i < p_len; i++) {
+    while (j>=0 && P[j]!=P[i]) {
+      if (j >= 1) {
+        j = prefix[j-1];
+      } else {
+        j--;
+      }
     }
-    // cout << "diff: " << diff << ' ' << j << ' ' << j+i << endl;
-    if (pre_diff >= 0 && diff != pre_diff) {
-      return false;
-    }
-    pre_diff = diff;
+    j++;
+    prefix[i] = j;
   }
-  return true;
 }
+
+// KMP algorithm reference:
+//  https://www.geeksforgeeks.org/searching-for-patterns-set-2-kmp-algorithm/
+bool search_pattern(int *S, int n_S, int *P, int n_P, int *prefix) {
+  int i = 0;
+  int j  = 0;
+  while (i < n_S) {
+    if (P[j] == S[i]) {
+      j++;
+      i++;
+    }
+
+    if (j == n_P) {
+      return true;
+    }
+
+    else if (i < n_S && P[j] != S[i]) {
+      if (j != 0)
+        j = prefix[j-1];
+      else
+        i = i+1;
+    }
+  }
+  return false;
+}
+
 
 int main() {
   int song[1000000];
   int snippet[100000];
+  int prefix[100000];
 
   std::map<char,int> semitone;
-  semitone['A'] = 0;
-  semitone['B'] = 2;
-  semitone['C'] = 3;
-  semitone['D'] = 5;
-  semitone['E'] = 7;
-  semitone['F'] = 8;
-  semitone['G'] = 10;
+  semitone['A'] = 1;
+  semitone['B'] = 3;
+  semitone['C'] = 4;
+  semitone['D'] = 6;
+  semitone['E'] = 8;
+  semitone['F'] = 9;
+  semitone['G'] = 11;
 
-  int M, T;
+  int M, T, prev;
   cin >> M >> T;
   while (M and T) {
     string notes;
     // read notes of the song
+    prev = 0;
     for (int i = 0; i < M; i++) {
       cin >> notes;
       int n = semitone[notes[0]];
@@ -79,9 +106,13 @@ int main() {
           n--;
         }
       }
-      song[i] = n;
+      if (i) {
+        song[i-1] = (n + 12 - prev) % 12;
+      }
+      prev = n;
     }
     // read node of supspect snippet
+    prev = 0;
     for (int i = 0; i < T; i++) {
       cin >> notes;
       int n = semitone[notes[0]];
@@ -92,19 +123,16 @@ int main() {
           n--;
         }
       }
-      snippet[i] = n;
+      if (i) {
+        snippet[i-1] = (n + 12 - prev) % 12;
+      }
+      prev = n;
     }
 
-    // search plagiarization
-    bool is_plag = false;
-    for (int i = 0; i <= M-T; i++) {
-      if (check_plag(song, snippet, i, T)) {
-        is_plag = true;
-        break;
-      }
-    }
+    calc_prefix(snippet, T-1, prefix);
+
     // print to stdout
-    if (is_plag) {
+    if (T == 1 || search_pattern(song, M-1, snippet, T-1, prefix)) {
       cout << "S\n";
     } else {
       cout << "N\n";

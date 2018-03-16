@@ -43,11 +43,11 @@ uva_408:    YES
 uva_11195:  YES
 uva_307:    YES
 uva_574:    YES
-<Extra2>:   NO
+uva_10503:  YES
 
 # Graph Traversal:
-uva_437:    NO
-uva_10672:  NO
+uva_437:    YES
+uva_10672:  YES
 <Extra1>:   NO
 <Extra2>:   NO
 
