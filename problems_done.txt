@@ -48,26 +48,28 @@ uva_10503:  YES
 # Graph Traversal:
 uva_437:    YES
 uva_10672:  YES
-<Extra1>:   NO
-<Extra2>:   NO
+uva_558:    YES
+uva_572:    YES
 
 # Graph Algorithms:
-uva_869:    NO
-uva_10034:  NO
-<Extra1>:   NO
-<Extra2>:   NO
+uva_869:    YES
+uva_10034:  YES
+uva_10806:  YES*
+uva_11721:  YES*
 
 # Dynamic Programming:
-uva_674:    NO
-uva_10003:  NO
-<Extra1>:   NO
-<Extra2>:   NO
+uva_674:    YES
+uva_10003:  YES
+uva_111:    YES
+uva_147:    YES
 
 # Geometry:
-uva_811:    NO
+uva_811:    YES
 uva_10065:  NO
-<Extra1>:   NO
+uva_356:    YES
 <Extra2>:   NO
 
-Other:
+# Other:
 uva_902:    YES
+uva_10922:  YES
+uva_158:    YES*

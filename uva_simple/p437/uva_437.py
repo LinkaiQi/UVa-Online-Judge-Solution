@@ -1,3 +1,36 @@
+# /* UVa problem: 437
+#  *
+#  * Topic: Graph Traversal
+#  *
+#  * Level: easy
+#  *
+#  * Brief problem description:
+#  *   Given n types of blocks, and an unlimited supply of blocks of each type.
+#  *   Each type blick was a rectangular solid with linear dimensions (x, y, z).
+#  *   A block could be reoriented so that any dimension can be the height.
+#  *   One blick could only be placed on top of another block as long as the two
+#  *   base dimension of the upper block were both strictly smaller than the corresponding
+#  *   base dimension of the lower block.
+#  *   The problem asks the maximum height of tower that can be built using blocks available.
+#  *
+#  * Solution Summary:
+#  *   This problem can be solved by constructing a DAG graph, each block orientation
+#  *   is a node. An edge exists from a block to another if it can be built over
+#  *   the other.
+#  *   Find the longest path(weight) in the DAG.
+#  *
+#  * Used Resources:
+#  *   None
+#  *
+#  * I hereby certify that I have produced the following solution myself
+#  * using only the resources listed above in accordance with the CMPUT
+#  * 403 collaboration policy.
+#  *
+#  *
+#  * --------------------- Linkai Qi
+#  */
+
+
 import sys
 
 # Global Variable
