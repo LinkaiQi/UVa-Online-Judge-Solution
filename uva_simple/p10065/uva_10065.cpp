@@ -5,13 +5,21 @@
  * Level: esay
  *
  * Brief problem description:
- *   -
+ *   Given a set of points. We can connect these points to form a polygon.
+ *   The area wasted is defined in the questions as the area not covered by the
+ *   points but by the convex hull of these points. Find the percentage of the
+ *   wasted area.
  *
  * Solution Summary:
- *   -
+ *   This is a straightforward Convex Hull question. First, find the convex hull by
+ *   using Jarvis’s Algorithm. And then calculate the area of the convex hull 'AC' and
+ *   the original polygon 'AO'. The percentage of wasted space is:
+ *     (AC - AO) / AC * 100%
+ *   The area of polygon is: 0.5 * the sum the cross products around each its vertex.
  *
  * Used Resources:
- *   -
+ *   Convex Hull Algorithm Reference: (Jarvis’s Algorithm or Wrapping)
+ *    https://www.geeksforgeeks.org/convex-hull-set-1-jarviss-algorithm-or-wrapping/
  *
  * I hereby certify that I have produced the following solution myself
  * using only the resources listed above in accordance with the CMPUT
@@ -41,11 +49,7 @@ struct Point {
   Point(int a, int b) { x = a; y = b; }
 };
 
-// To find orientation of ordered triplet (p, q, r).
-// The function returns following values
-// 0 --> p, q and r are colinear
-// 1 --> Clockwise
-// 2 --> Counterclockwise
+
 int orientation(struct Point p, struct Point q, struct Point r){
   int val = (q.y - p.y) * (r.x - q.x) - (q.x - p.x) * (r.y - q.y);
   if (val == 0) return 0;  // colinear
@@ -93,19 +97,13 @@ void calc_convex_hull(vector<struct Point> tile, vector<struct Point> &hull) {
 
 
 double calc_area(vector<struct Point> polygon) {
-  // Debug
-  for (int i = 0; i < polygon.size(); i++) {
-    cout << polygon[i].x << ' ' << polygon[i].y << endl;
-  }
-
-
   double area = 0;
   int j, n = polygon.size();
   for (int i = 0; i < n; i++) {
     j = (i+1) % n;
-    area += 0.5 * abs(polygon[i].x * polygon[j].y - polygon[j].x * polygon[i].y);
+    area += (polygon[i].x * polygon[j].y - polygon[j].x * polygon[i].y);
   }
-  return area;
+  return 0.5 * abs(area);
 }
 
 
@@ -114,7 +112,6 @@ int main() {;
   vector<struct Point> Tile, Packer;
 
   while (cin >> N, N) {
-    if (k) { cout << endl; }
     k++;
     Tile.clear();
     Packer.clear();
@@ -125,15 +122,14 @@ int main() {;
     }
 
     calc_convex_hull(Tile, Packer);
-    // cout << "pack size: " << Packer.size() << endl;
-    double tile_area = calc_area(Tile);
-    cout << "tile_area: " << tile_area << endl;
 
+    double tile_area = calc_area(Tile);
+    // cout << "tile_area: " << tile_area << endl;
     double packer_area = calc_area(Packer);
-    cout << "packer_area: "<< packer_area << endl;
-    
+    // cout << "packer_area: "<< packer_area << endl;
+
     cout << "Tile #" << k << endl;
-    printf("Wasted Space = %.2f %%\n", (packer_area - tile_area) / packer_area * 100);
+    printf("Wasted Space = %.2f %%\n\n", (packer_area - tile_area) / packer_area * 100);
   }
   return 0;
 }

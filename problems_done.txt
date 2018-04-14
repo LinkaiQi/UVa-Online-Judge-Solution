@@ -24,14 +24,18 @@ uva_10041:  YES
 # Arithmetic:
 uva_202:    YES
 uva_11955:  YES
-<Extra1>:   NO
-<Extra2>:   NO
+uva_355:    YES
+uva_561:    YES
+uva_113:    YES
+uva_11417:  YES
 
 # Combinatorics:
 uva_11330:  YES
 uva_12492:  YES
-<Extra1>:   NO
-<Extra2>:   NO
+uva_485:    YES
+uva_10007:  YES
+uva_10303:  YES
+uva_10247:  YES
 
 # Number Theory:
 uva_374:    YES
@@ -54,7 +58,7 @@ uva_572:    YES
 # Graph Algorithms:
 uva_869:    YES
 uva_10034:  YES
-uva_10806:  YES*
+uva_10806:  YES
 uva_11721:  YES*
 
 # Dynamic Programming:
@@ -62,14 +66,23 @@ uva_674:    YES
 uva_10003:  YES
 uva_111:    YES
 uva_147:    YES
+uva_10684:  YES
+uva_116:    YES
 
 # Geometry:
 uva_811:    YES
-uva_10065:  NO
+uva_10065:  YES
 uva_356:    YES
-<Extra2>:   NO
+uva_378:    YES
+uva_190:    YES
+uva_191:    YES
+uva_460:    YES
 
 # Other:
 uva_902:    YES
 uva_10922:  YES
-uva_158:    YES*
+uva_158:    YES
+uva_119:    YES
+uva_100:    YES
+uva_551:    YES
+uva_623:    YES

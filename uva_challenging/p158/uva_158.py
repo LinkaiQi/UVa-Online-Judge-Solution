@@ -1,3 +1,32 @@
+# /* UVa problem: 158
+#  *
+#  * Topic: Others
+#  *
+#  * Level: challenging
+#  *
+#  * Brief problem description:
+#  *    Implement a reminder that could remind us of when the important dates
+#  *    are approaching.
+#  *    The input will specify the year for which the calendar is relevant
+#  *    (in the range 1901 to 1999). This will be followed by a series of lines
+#  *    representing anniversaries or days for which the service is requested.
+#  *
+#  * Solution Summary:
+#  *    This is a straight forward question. We need calculate the number of
+#  *    days before the event. And using dictionary data structure to keep
+#  *    track of the events. Sort according to the importance of the event.
+#  *
+#  * Used Resources:
+#  *    None
+#  *
+#  * I hereby certify that I have produced the following solution myself
+#  * using only the resources listed above in accordance with the CMPUT
+#  * 403 collaboration policy.
+#  *
+#  *
+#  * --------------------- Linkai Qi
+#  */
+
 import sys
 
 def sort_reminders(rems):

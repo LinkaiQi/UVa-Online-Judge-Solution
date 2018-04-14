@@ -5,10 +5,13 @@
  * Level: challenging
  *
  * Brief problem description:
- *   -
+ *   Given a graph, find all node that if we start at this node, we could reach
+ *   a negative cycle in the graph.
  *
  * Solution Summary:
- *   -
+ *   If there is a negative cycle in the graph, Bellman ford algorithm can give
+ *   us the negative cycle. Start from the negative cycle, reverse the edges,
+ *   find which nodes we can reach.   
  *
  * Used Resources:
  *   -

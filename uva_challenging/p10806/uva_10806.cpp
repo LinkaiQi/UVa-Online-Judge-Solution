@@ -5,10 +5,13 @@
  * Level: challenging
  *
  * Brief problem description:
- *   -
+ *   "Given a weighed, undirected graph, find the shortest path from S to T
+ *   and back without using the same edge twice." -- UVa_Online_Judge
  *
  * Solution Summary:
- *   -
+ *   This is a max-flow problem. Each street is an edge with capacity 1. Set the
+ *   jail as source node, station as end node, If max-flow is no less than 2, we
+ *   have a solution.
  *
  * Used Resources:
  *   -
