@@ -58,7 +58,7 @@ uva_572:    YES
 # Graph Algorithms:
 uva_869:    YES
 uva_10034:  YES
-uva_10806:  YES
+uva_10806:  YES*
 uva_11721:  YES*
 
 # Dynamic Programming:
